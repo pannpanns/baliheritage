@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bali Heritage Wear — Warisan Bali dalam Setiap Jahitan</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/img/logo.png" alt="logo" width="44" height="44" class="rounded">
+        <span class="brand-title">Bali Heritage Wear</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Produk</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">
+              <i class="bi bi-cart3 me-1"></i>Keranjang
+              <span id="cart-count" class="badge bg-danger ms-1">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero d-flex align-items-center">
+    <div class="overlay"></div>
+    <div class="container hero-inner text-start">
+      <h1 class="display-4 fw-bold mb-3">Mengenakan Tradisi,<br>Merayakan Warisan</h1>
+      <p class="lead mb-4">Udeng, kamen, saput, dan busana adat yang dibuat oleh pengrajin lokal Bali.</p>
+      <div>
+        <a href="product.html" class="btn btn-primary me-2">Lihat Produk</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-6">
+          <h2 class="fw-bold">Tentang Bali Heritage Wear</h2>
+          <p class="text-muted">
+            Bali Heritage Wear adalah UMKM yang memproduksi pakaian adat Bali secara tradisional dan berkelanjutan.
+            Kami bekerja sama dengan pengrajin lokal untuk menjaga kualitas, estetika, dan kelestarian budaya.
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check2-circle text-gold me-2"></i>Material ramah lingkungan</li>
+            <li class="mb-2"><i class="bi bi-check2-circle text-gold me-2"></i>Pengrajin lokal bersertifikat</li>
+            <li class="mb-2"><i class="bi bi-check2-circle text-gold me-2"></i>Pengiriman cepat domestik</li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="assets/img/tentang.jpeg" alt="craft" class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO MINGGU INI -->
+  <section id="promo" class="py-5 bg-soft">
+    <div class="container">
+      <h3 class="fw-bold text-center mb-4">Promo Minggu Ini</h3>
+      <div class="scroll-container d-flex gap-3">
+
+        <!-- Card 1 -->
+        <div class="card card-product flex-shrink-0" style="width: 18rem;">
+          <img src="assets/img/product6.jpg" class="card-img-top" alt="Udeng Bali">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Udeng Batik</h5>
+            <p class="card-text text-muted mb-2">Udeng elegan, bahan adem cocok untuk upacara adat.</p>
+            <p class="text-muted mb-3">
+              <span class="text-decoration-line-through me-2">Rp150.000</span>
+              <span class="fw-bold text-danger">Rp120.000</span>
+            </p>
+            <div class="mt-auto d-grid">
+              <button class="btn btn-primary" onclick="addToCart(6)">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card card-product flex-shrink-0" style="width: 18rem;">
+          <img src="assets/img/product7.jpg" class="card-img-top" alt="Kamen">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Kebaya Kuning</h5>
+            <p class="card-text text-muted mb-2">Kebaya Kuning, tersedia berbagai ukuran.</p>
+            <p class="text-muted mb-3">
+              <span class="text-decoration-line-through me-2">Rp180.000</span>
+              <span class="fw-bold text-danger">Rp150.000</span>
+            </p>
+            <div class="mt-auto d-grid">
+              <button class="btn btn-primary" onclick="addToCart(7)">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card card-product flex-shrink-0" style="width: 18rem;">
+          <img src="assets/img/product8.jpg" class="card-img-top" alt="Baju Putih Adat">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Kemeja Hitam</h5>
+            <p class="card-text text-muted mb-2">Atasan Tradisional, nyaman & rapi.</p>
+            <p class="text-muted mb-3">
+              <span class="text-decoration-line-through me-2">Rp200.000</span>
+              <span class="fw-bold text-danger">Rp180.000</span>
+            </p>
+            <div class="mt-auto d-grid">
+              <button class="btn btn-primary" onclick="addToCart(8)">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card card-product flex-shrink-0" style="width: 18rem;">
+          <img src="assets/img/product9.jpg" class="card-img-top" alt="Kamen Hitam">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Kamen Hitam</h5>
+            <p class="card-text text-muted mb-2">Kamen hitam, tersedia berbagai ukuran.</p>
+            <p class="text-muted mb-3">
+              <span class="text-decoration-line-through me-2">Rp180.000</span>
+              <span class="fw-bold text-danger">Rp150.000</span>
+            </p>
+            <div class="mt-auto d-grid">
+              <button class="btn btn-primary" onclick="addToCart(9)">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK UNGGULAN -->
+  <section id="products" class="py-5 bg-soft">
+    <div class="container">
+      <h3 class="fw-bold text-center mb-4">Produk Unggulan</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-product h-100">
+            <img src="assets/img/product1.png" class="card-img-top" alt="Udeng Bali">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Udeng Batik Tulis</h5>
+              <p class="card-text text-muted mb-2">Udeng elegan, bahan adem cocok untuk upacara adat.</p>
+              <p class="fw-bold text-brown mb-3">Rp150.000</p>
+              <div class="mt-auto d-grid">
+                <button class="btn btn-primary" onclick="addToCart(1)">Pesan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-product h-100">
+            <img src="assets/img/product2.jpg" class="card-img-top" alt="Saput">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Saput Songket Ungu</h5>
+              <p class="card-text text-muted mb-2">Saput songket khas warna ungu.</p>
+              <p class="fw-bold text-brown mb-3">Rp180.000</p>
+              <div class="mt-auto d-grid">
+                <button class="btn btn-primary" onclick="addToCart(2)">Pesan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-product h-100">
+            <img src="assets/img/product3.jpeg" class="card-img-top" alt="Baju Putih">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Kemeja Putih</h5>
+              <p class="card-text text-muted mb-2">Atasan tradisional untuk sembahyang, nyaman & rapi.</p>
+              <p class="fw-bold text-brown mb-3">Rp200.000</p>
+              <div class="mt-auto d-grid">
+                <button class="btn btn-primary" onclick="addToCart(3)">Pesan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section id="testimoni" class="py-5 bg-light">
+    <div class="container">
+      <h3 class="fw-bold text-center mb-5">Pelanggan Kami Mencintai Kami!</h3>
+      <div class="row g-4">
+        <!-- Testimoni 1 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 border-0 rounded-4 p-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/img/user1.jpg" alt="I Ketut Baskom" class="rounded-circle me-3" width="60" height="60">
+              <div>
+                <h6 class="mb-0 fw-bold">I Ketut Baskom</h6>
+                <small class="text-muted">Fotografer</small>
+              </div>
+            </div>
+            <p class="text-muted fst-italic">“Udeng-nya keren banget! Bahan adem dan nyaman dipakai waktu upacara. Pelayanannya juga cepat dan ramah, pasti beli lagi nanti 👏”</p>
+          </div>
+        </div>
+
+        <!-- Testimoni 2 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 border-0 rounded-4 p-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/img/user2.jpeg" alt="Anya Geraldine" class="rounded-circle me-3" width="60" height="60">
+              <div>
+                <h6 class="mb-0 fw-bold">Anya Geraldine</h6>
+                <small class="text-muted">Konsumen Liburan</small>
+              </div>
+            </div>
+            <p class="text-muted fst-italic">“Kain kamen-nya motifnya bagus banget, pas banget buat upacara di Bali. Dikirim cepat dan wangi banget pas datang 😄👍”</p>
+          </div>
+        </div>
+
+        <!-- Testimoni 3 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 border-0 rounded-4 p-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/img/user3.jpg" alt="Jefri Niken" class="rounded-circle me-3" width="60" height="60">
+              <div>
+                <h6 class="mb-0 fw-bold">Jefri Niken</h6>
+                <small class="text-muted">Konsumen Setia</small>
+              </div>
+            </div>
+            <p class="text-muted fst-italic">“Sudah dua kali beli di sini, selalu puas. Produk baru mereka stylish tapi tetap tradisional. Pokoknya top banget! ❤️”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light pt-5">
+    <div class="container pb-3">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3 text-white">Tentang Kami</h5>
+          <p class="small text-light opacity-75">
+            Bali Heritage Wear adalah UMKM yang memproduksi pakaian adat Bali seperti udeng, kamen, dan baju adat.
+            Kami berkomitmen menjaga warisan budaya dengan gaya modern dan berkelas.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3 text-white">Sosial Media Kami</h5>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3 text-white">Kontak Kami</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2">
+              <i class="bi bi-whatsapp me-2 text-warning"></i>
+              <span class="text-light">+62 812-3456-7890</span>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope me-2 text-warning"></i>
+              <span class="text-light">info@baliheritagewear.com</span>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-geo-alt me-2 text-warning"></i>
+              <span class="text-light">Denpasar, Bali</span>
+            </li>
+            <li>
+              <i class="bi bi-clock me-2 text-warning"></i>
+              <span class="text-light">Senin - Minggu | 07:00 – 22:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-light opacity-25 mt-4">
+      <p class="text-center small text-secondary mb-0">
+        © 2025 <span class="text-light">Bali Heritage Wear</span> — Semua Hak Dilindungi
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script>
+    updateCartBadge();
+  </script>
+
+</body>
+</html>
